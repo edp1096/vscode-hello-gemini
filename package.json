@@ -1,0 +1,63 @@
+{
+  "name": "vscode-hello-gemini",
+  "displayName": "Hello Gemini",
+  "publisher": "edp1096",
+  "description": "Generate code using Gemini",
+  "version": "0.0.1",
+  "license": "MIT",
+  "homepage": "https://github.com/edp1096/vscode-hello-gemini",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edp1096/vscode-hello-gemini"
+  },
+  "engines": {
+    "vscode": "^1.85.2"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Machine Learning",
+    "Education"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "hello-gemini.generate_code",
+        "title": "Call gemini for code generation"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "hello-gemini.generate_code",
+        "key": "alt+q",
+        "mac": "alt+q",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "ts-node src/test/test.ts"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.85.2",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "@vscode/test-electron": "^2.1.5",
+    "eslint": "^8.20.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.2.1"
+  }
+}

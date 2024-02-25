@@ -1,0 +1,9 @@
+out
+dist
+node_modules
+.vscode-test/
+*.vsix
+
+/test.compress.css
+/test.compress.scss
+yarn.lock
