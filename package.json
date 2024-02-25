@@ -1,7 +1,7 @@
 {
   "name": "vscode-hello-gemini",
   "displayName": "Hello Gemini",
-  "publisher": "edp1096",
+  "publisher": "edp1097",
   "description": "Generate code using Gemini",
   "version": "0.0.1",
   "license": "MIT",
